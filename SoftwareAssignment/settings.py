@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'q@(r+=(3-78ma-(6tbk&m#mzj&oayeczi2$79#-2o9%awfo)1l'
+SECRET_KEY = 'bhdr0)qqdapi2ngh710(xv!axaqtz*cwj8)k7-a$+9_3g+u)*)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,10 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'tags.apps.TagsConfig',
     'blog.apps.BlogConfig',
     'todo.apps.TodoConfig',
     'users.apps.UsersConfig',
-    'tags.apps.TagsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -124,5 +124,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL='/blog/entries/'
+LOGIN_REDIRECT_URL='blog/entries/'
 LOGIN_URL='/users/login/'
+

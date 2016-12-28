@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from blog.views import show_blog, get_blog
+from .views import show_blog, get_blog
 
 urlpatterns = [
     url(r'^$', show_blog),

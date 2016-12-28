@@ -18,8 +18,12 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls),
     url(r'blog/entries/', include('blog.urls')),
     url(r'todos/', include('todo.urls')),
     url(r'users/', include('users.urls')),
     url(r'tags/', include('tags.urls')),
 ]
+
+
+
