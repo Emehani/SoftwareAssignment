@@ -8,7 +8,7 @@ from django.shortcuts import render
 
 from blog.forms import BlogForm
 from tags.models import Tag
-from .models import Bloog
+from .models import Blog
 
 
 def show_blog(request):
@@ -24,7 +24,7 @@ def show_blog(request):
     elif request.method == "GET":
         form = BlogForm()
 
-    return render(request, "get_blog.html", {"blogs": Bloog.objects.filter(owner=request.user.id),
+    return render(request, "get_blog.html", {"blogs": Blog.objects.filter(owner=request.user.id),
                                              "tags":Tag.objects.all(),
                                              "form": form})
 
@@ -33,11 +33,11 @@ def show_blog(request):
 
 def get_blog(request, blog_id):
     try:
-        blog = Bloog.objects.get(id=blog_id)
+        blog = Blog.objects.get(id=blog_id)
         if request.user.id != blog.owner.id:
             raise PermissionDenied
         return render(request, "show_blog.html", {"blog": blog})
-    except Bloog.DoesNotExist:
+    except Blog.DoesNotExist:
         raise Http404("We don't have any.")
 
 

@@ -1,8 +1,8 @@
 from django import forms
-from .models import Bloog
+from .models import Blog
 
 class BlogForm(forms.ModelForm):
 
     class Meta:
-        model = Bloog
+        model = Blog
         fields = ["name", "description", "tags"]
