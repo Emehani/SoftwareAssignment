@@ -1,3 +1,3 @@
-# software-assignment-3
+# software-assignment
 
 https://github.com/Emehani/SoftwareAssignment
