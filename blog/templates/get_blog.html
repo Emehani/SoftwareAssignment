@@ -19,6 +19,7 @@
             {% for tag in blog.tags.all %}
                 {{ tag.name }}
             {% endfor  %}
+        <p>&nbsp;&nbsp;&nbsp; written by: {{ blog.owner.username }}</p>
         </li>
     {% endfor %}
 </ol>

@@ -10,8 +10,8 @@
     <table id="5" parent="1" name="auth_user"/>
     <table id="6" parent="1" name="auth_user_groups"/>
     <table id="7" parent="1" name="auth_user_user_permissions"/>
-    <table id="8" parent="1" name="blog_bloog"/>
-    <table id="9" parent="1" name="blog_bloog_tags"/>
+    <table id="8" parent="1" name="blog_blog"/>
+    <table id="9" parent="1" name="blog_blog_tags"/>
     <table id="10" parent="1" name="django_admin_log"/>
     <table id="11" parent="1" name="django_content_type"/>
     <table id="12" parent="1" name="django_migrations"/>
@@ -266,7 +266,7 @@ permission_id</columns>
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="68" parent="8" name="#FAKE_blog_bloog_1">
+    <foreign-key id="68" parent="8" name="#FAKE_blog_blog_1">
       <name-surrogate>1</name-surrogate>
       <columns>owner_id</columns>
       <deferrable>1</deferrable>
@@ -279,7 +279,7 @@ permission_id</columns>
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
     </column>
-    <column id="70" parent="9" name="bloog_id">
+    <column id="70" parent="9" name="blog_id">
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
     </column>
@@ -287,8 +287,8 @@ permission_id</columns>
       <mandatory>1</mandatory>
       <data-type>INTEGER(0,-1)|4</data-type>
     </column>
-    <index id="72" parent="9" name="blog_bloog_tags_bloog_id_7a0a702c_uniq">
-      <columns>bloog_id
+    <index id="72" parent="9" name="blog_blog_tags_blog_id_211c6be5_uniq">
+      <columns>blog_id
 tag_id</columns>
       <desc-columns></desc-columns>
       <unique>1</unique>
@@ -297,16 +297,16 @@ tag_id</columns>
       <columns>id</columns>
       <primary>1</primary>
     </key>
-    <foreign-key id="74" parent="9" name="#FAKE_blog_bloog_tags_2">
+    <foreign-key id="74" parent="9" name="#FAKE_blog_blog_tags_2">
       <name-surrogate>1</name-surrogate>
-      <columns>bloog_id</columns>
+      <columns>blog_id</columns>
       <deferrable>1</deferrable>
       <initially-deferred>1</initially-deferred>
-      <ref-key>~.blog_bloog.#1</ref-key>
+      <ref-key>~.blog_blog.#1</ref-key>
       <cascade-update-rule>no_action</cascade-update-rule>
       <cascade-delete-rule>no_action</cascade-delete-rule>
     </foreign-key>
-    <foreign-key id="75" parent="9" name="#FAKE_blog_bloog_tags_1">
+    <foreign-key id="75" parent="9" name="#FAKE_blog_blog_tags_1">
       <name-surrogate>1</name-surrogate>
       <columns>tag_id</columns>
       <deferrable>1</deferrable>
